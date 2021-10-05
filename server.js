@@ -8,7 +8,7 @@ const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 const app = express();
 const db = mongoose.connection;
-const Character = require("./models/character.js");
+// const Character = require("./models/character.js");
 //___________________
 //Port
 //___________________
@@ -48,63 +48,9 @@ app.use(express.json()); // returns middleware that only parses JSON - may or ma
 //use method override
 app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
-//___________________
-// Routes
-//___________________
-// INDEX (get)
-app.get('/characters', (req, res) => {
-  Character.find({}, (error, allCharacters) => {
-    res.render('index.ejs', {
-      characters: allCharacters,
-    });
-  });
-});
-
-// NEW (get)
-app.get("/characters/new", (req, res) => {
-  res.render('new.ejs');
-});
-
-// DESTROY (delete)
-app.delete("/characters/:id", (req, res) => {
-  Character.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect("/characters")
-  });
-});
-
-// UPDATE (put)
-app.put("/characters/:id", (req, res) => {
-  Character.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  }, (error, updatedCharacter) => {
-    res.redirect(`/characters/${req.params.id}`);
-  });
-});
-
-// CREATE (post)
-app.post("/characters", (req, res) => {
-  Character.create(req.body, (error, createdCharacter) => {
-    res.redirect('/characters');
-  });
-});
-
-//EDIT (get) (put)
-app.get("/characters/:id/edit", (req, res) => {
-  Character.findById(req.params.id, (error, foundCharacter) => {
-    res.render("edit.ejs", {
-      character: foundCharacter,
-    });
-  });
-});
-
-// SHOW (get)
-app.get("/characters/:id", (req, res) => {
-  Character.findById(req.params.id, (err, foundCharacter) => {
-    res.render('show.ejs', {
-      character: foundCharacter,
-    });
-  });
-});
+// Routes / Controllers
+const charactersController = require('./controllers/characters');
+app.use("/characters", charactersController);
 
 //localhost:3000
 app.get("/", (req, res) => {
