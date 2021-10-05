@@ -66,7 +66,21 @@ app.get("/characters/new", (req, res) => {
 });
 
 // DESTROY (delete)
+app.delete("/characters/:id", (req, res) => {
+  Character.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect("/characters")
+  });
+});
+
 // UPDATE (put)
+app.put("/characters/:id", (req, res) => {
+  Character.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  }, (error, updatedCharacter) => {
+    res.redirect(`/characters/${req.params.id}`);
+  });
+});
+
 // CREATE (post)
 app.post("/characters", (req, res) => {
   Character.create(req.body, (error, createdCharacter) => {
@@ -75,9 +89,16 @@ app.post("/characters", (req, res) => {
 });
 
 //EDIT (get) (put)
+app.get("/characters/:id/edit", (req, res) => {
+  Character.findById(req.params.id, (error, foundCharacter) => {
+    res.render("edit.ejs", {
+      character: foundCharacter,
+    });
+  });
+});
 
 // SHOW (get)
-app.get('/characters/:id', (req, res) => {
+app.get("/characters/:id", (req, res) => {
   Character.findById(req.params.id, (err, foundCharacter) => {
     res.render('show.ejs', {
       character: foundCharacter,
