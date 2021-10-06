@@ -11,6 +11,7 @@
   <nav>
     <a href="/characters">Back to Character Log</a>
   </nav>
+  <div class="container">
   <div class="primary-column">
   <div class="main-text">
   <h1><%=character.name %></h1>
@@ -22,8 +23,12 @@
   Height: <%= character.height %> <br>
   Nationality: <%= character.nationality %> <br>
 </div>
-  Biography: <%= character.biography %> <br>
   </div>
-  </div>
+  <div class="secondary-column">
+  <span class="biography">Biography:</span> <br>
+  <br>
+  <p> <%= character.biography %> </p> 
+  </div> 
 </body>
+</div>
 </html>

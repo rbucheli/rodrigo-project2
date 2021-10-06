@@ -1,4 +1,4 @@
-/* Show & New Pages */
+/* Edit & New Pages */
 h1 {
   text-align: center;
   font-weight: 1000px; 
@@ -17,15 +17,15 @@ body {
   list-style-type: none;
 }
 
-/* Container */
-.charcreation {
+/* Containers */
+.char-creation {
   width: 50%;
   background: rgb(125, 124, 124);
   border-radius: 10px 10px 10px 10px;
   padding: 20px;
   box-sizing: border-box;
   margin-left: 25%;
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 /* Forms */
@@ -74,28 +74,50 @@ textarea {
 /* Index */
 
 /* Show */
+.container {
+  width: 76vw;
+  height: 60vw;
+  margin: 50px auto;
+  display: flex;
+  border-radius: 10px;
+}
+
 .primary-column {
   border: solid; 
   border-width: 2px;
-  border-radius: 2ch;
   border-color: black;
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   background-color: black;
-  width: 20%;
-  margin-left: 15%;
+  width: 30%;
+  float: left;
 }
 
 .main-text {
   color: white;
 }
 
-
-span {
-
-}
-
 .char-image {
-  /* clip-path: circle(50% 0, 100% 50%, 50% 100%, 0 50%);
-  width: 20%; */
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
 }
 
+.secondary-column {
+  background-color: white;
+  width: 100%;
+  border: rgb(156, 123, 123);
+  border-radius: 0;
+  float: right;
+}
+
+.biography {
+  border-bottom: 1px solid grey;
+  font-size: 40px;
+  text-align: left;
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+  text-indent: 
+}
