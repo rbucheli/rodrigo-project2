@@ -20,7 +20,7 @@ characterRouter.get("/new", (req, res) => {
 });
 
 // DESTROY (delete)
-characterRouter.delete("/characters/:id", (req, res) => {
+characterRouter.delete("/:id", (req, res) => {
   Character.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect("/characters")
   });

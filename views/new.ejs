@@ -4,21 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/normalize.css">
 		<title></title>
 	</head>
 	<body>
+    <!-- <div class="container"> -->
+      <!-- sidebar -->
+      <!-- <div class="sidebar"></div> -->
+      <!-- Character container -->
+      <div class="charcreation">
 		<h1>New Character</h1>
 		<form action="/characters" method="POST">
-			name: <input type="text" name="name" /><br />
-			gender: <input type="text" name="gender" /><br />
-			race: <input type="text" name="race" /><br />
-      age: <input type="text" name="age" /><br />
-      birthday: <input type="text" name="birthday" /><br />
-      height: <input type="text" name="height" /><br />
-      hometown: <input type="text" name="hometown" /><br />
-      biography: <input type="text" name="biography" /><br />
-			<input type="submit" name="" value="Add Character" />
+      <fieldset class="character-info">
+      <label for="image">Image</label> 
+      <input type="text" name="image" /><br />
+			<label for="name">Name</label>
+      <input type="text" name="name" /><br />
+			<label for="gender">Gender</label>
+      <input type="text" name="gender" /><br />
+			<label for="race">Race</label>
+      <input type="text" name="race" /><br />
+      <label for="age">Age</label>
+      <input type="text" name="age" /><br />
+      <label for="birthday">Birthday</label>
+      <input type="text" name="birthday" /><br />
+      <label for="height">Height</label>
+      <input type="text" name="height" /><br />
+      <label for="nationality">Nationality</label>
+      <input type="text" name="hometown" /><br />
+      <label for="biography">Biography</label>
+      <input type="text" name="biography" /><br />
+      </fieldset>
+			<input type="submit" value="Add Character" />
 		</form>
+    </div>
 	</body>
 	</body>
 </html>
