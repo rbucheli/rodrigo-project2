@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/normalize.css">
   <title>Document</title>
 </head>
 <body>
   <nav>
     <a href="/characters">Back to Character Log</a>
   </nav>
+  <div class="primary-column">
+  <div class="main-text">
   <h1><%=character.name %></h1>
-  <img src=<%= character.image %>> <br>
-  Gender: <%= character.gender %> <br>
+  <img class="char-image" src=<%= character.image %>> <br>
+  <span id="circle-box" >Gender: </span> <%= character.gender %> <br>
   Race: <%= character.race %> <br>
   Age: <%= character.age %> <br>
   Birthday: <%= character.birthday %> <br>
   Height: <%= character.height %> <br>
   Nationality: <%= character.nationality %> <br>
+</div>
   Biography: <%= character.biography %> <br>
-
+  </div>
+  </div>
 </body>
 </html>
