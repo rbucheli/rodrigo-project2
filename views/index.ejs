@@ -4,23 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="/normalize.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+    crossorigin="anonymous" />
+    <link rel="stylesheet" href="/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
 		<title>Character</title>
 	</head>
 	<body>
     <nav>
       <a href="/characters/new">Add a New Character</a>
     </nav>
-		<h1>My Character List</h1>
+		<h2>Character Vault</h2>
+    <div class="index-container">
     <ul>
       <% characters.forEach(character => { %>
-      <li#otis> <a href="/characters/<%=character._id; %>"> <%=character.name; %> </a>
+      <li#otis> <a href="/characters/<%=character._id; %>"> <img class="index-image" src="<%=character.image; %>""> </a>
       <form action="/characters/<%= character.id %>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE" />
       </form>
       <a href="/characters/<%=character._id %>/edit">Edit</a>
       </li>
       <%  }) %>
+    </div>
     </ul>
 	</body>
 </html>

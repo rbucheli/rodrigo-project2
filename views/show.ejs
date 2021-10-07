@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/normalize.css" />
     <title>Document</title>
   </head>
   <body>
+    <div class="bg-image"></div>
     <nav>
       <a href="/characters">Back to Character Log</a>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 primary-column">
+    <div class="container px-3">
+      <div class="row gx-5">
+        <div class="col-md-3 col-xs-12 primary-column">
           <div class="main-text">
             <h1><%=character.name %></h1>
             <img class="char-image" src="<%= character.image%>" /> <br />
@@ -31,7 +35,7 @@
             Nationality: <%= character.nationality %> <br />
           </div>
         </div>
-        <div class="col-md-9 secondary-column">
+        <div class="col-md-9 col-xs-12 secondary-column">
           <div>
             <span class="biography">Biography</span> <br />
             <br />
