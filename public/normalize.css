@@ -1,20 +1,60 @@
 /* Index */
-h2 {
+.page-title {
   text-align: center;
   font-family: 'Source Serif Pro', serif;
   font-weight: bold;
+  font-size: 90px;
+  color: white;
+  text-shadow: black 6px 4px 3px;
 }
 
-.index-container {
-  width: 30vw;
-  height: 30vw;
+.character-name{
+  font-size: 45px;
+  color: white;
+}
 
+/* .index-container {
+} */
+
+.character-row {
+  background: rgb(110 110 110 / 65%);
+  padding: 20px 0px;
+  border-radius: 25px;
+}
+
+.character-portrait {
+  display: flex;
+}
+
+.character-portrait-link {
+  margin: auto;
+}
+.btn-custom-dlt {
+  height: 100%;
+  width: 100%;
+}
+
+.btn-custom-edit {
+  background-color: #75a4cd;
+  width: 100%;
+}
+
+.btn-custom-add {
+  background-color: #75a4cd;
+  font-size: 35px;
+  margin: auto;
+}
+
+.index-container .row {
+  margin-bottom: 20px;
 }
 
 .index-image {
-  height: auto;
-  width: 100%;
   border-radius: 100%;
+  border: 8px solid #e5d393;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
 }
 
 
@@ -25,26 +65,31 @@ h1 {
   color: white;
 }
 
-body {
-  background-image: url(https://cdn.wallpapersafari.com/93/45/XrYEjW.jpg);
-  background-size: 800px;
-  background-position-x:center;
-  background-position-y: top; 
+html {
+  background: url(/images/bookshelf.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#otis li {
-  list-style-type: none;
+body {
+  background-color: rgba(0,0,0,0);
 }
 
 /* Container */
 .char-creation {
-  width: 50%;
-  background: rgb(125, 124, 124);
-  border-radius: 10px 10px 10px 10px;
+  width: 65%;
+  background-color: rgb(110 110 110 / 65%);
+  border-radius: 25px;
   padding: 20px;
   box-sizing: border-box;
-  margin-left: 25%;
+  margin: auto;
   overflow: auto;
+}
+
+.char-creation input{
+  width: 85%;
 }
 
 /* Forms */
@@ -90,15 +135,6 @@ textarea {
   height: 75px;
 }
 
-/* Show */
-/* .container {
-  width: 76vw;
-  height: 60vw;
-  margin: 50px auto;
-  display: flex;
-  border-radius: 10px;
-} */
-
 .primary-column {
   border: solid; 
   border-width: 2px;
@@ -110,27 +146,37 @@ textarea {
 .main-text {
   color: white;
 }
+.main-text .index-image {
+  margin: auto;
+}
+
+.main-text .badge {
+  margin: auto;
+}
 
 .main-text h1 {
   font-family: 'Source Serif Pro', serif;
   font-style: italic;
 }
 
-.char-image {
-  height: auto;
-  width: 100%;
-  border-radius: 100%;
-}
 
 .secondary-column {
-  background-color: #f7e0ff;
-  border: 1px solid;
+  background: rgb(110 110 110 / 65%);
+  padding: 20px 0px;
+  border-radius: 0 25px 25px 0;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .secondary-column {
+    margin-top: 20px;
+    border-radius: 25px;
+  }
 }
 
 .biography {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid white;
   font-size: 40px;
-  /* text-align: left; */
   text-indent: 50px;
   font-family: 'Source Serif Pro', serif;
 }

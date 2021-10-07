@@ -17,30 +17,87 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="bg-image"></div>
-    <nav>
-      <a href="/characters">Back to Character Log</a>
-    </nav>
-    <div class="container px-3">
-      <div class="row gx-5">
-        <div class="col-md-3 col-xs-12 primary-column">
+
+    <h2 class='page-title'>Character Details</h2>
+
+    <div class="container">
+      <div class="row col-md-2">
+        <a class='btn btn-primary mb-3' href="/characters">Back to Character Log</a>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-xs-12 primary-column">
           <div class="main-text">
-            <h1><%=character.name %></h1>
-            <img class="char-image" src="<%= character.image%>" /> <br />
-            <span id="circle-box">Gender: </span> <%= character.gender %> <br />
-            Race: <%= character.race %> <br />
-            Age: <%= character.age %> <br />
-            Birthday: <%= character.birthday %> <br />
-            Height: <%= character.height %> <br />
-            Nationality: <%= character.nationality %> <br />
+            <div class="row"> 
+              <h2><%=character.name %></h1>
+            </div>
+            <div class="character-portrait">
+              <img class="index-image" src="<%= character.image%>" /> <br />
+            </div>
+            <div class="container my-2">
+              <!-- Gender -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Gender:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.gender %>
+                </div>
+              </div>
+              <!-- Race -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Race:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.race %>
+                </div>
+              </div>
+              <!-- Age -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Age:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.age %>
+                </div>
+              </div>
+              <!-- Birthday -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Birthday:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.birthday %>
+                </div>
+              </div>
+              <!-- Height -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Height:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.height %>
+                </div>
+              </div>
+              <!-- Nationality -->
+              <div class="row my-2">
+                <div class="badge bg-light text-dark col-md-4 col-sm-6">
+                  Nationality:
+                </div>
+                <div class="col-md-8 col-sm-6">
+                 <%= character.nationality %>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
-        <div class="col-md-9 col-xs-12 secondary-column">
-          <div>
-            <span class="biography">Biography</span> <br />
-            <br />
-            <p><%= character.biography %></p>
-          </div>
+        <div class="col-md-8 col-xs-12 secondary-column">
+            <div class="container">             
+              <h3 class="biography">Biography</h3>
+              <br/>
+              <p><%= character.biography %></p>
+            </div>
         </div>
       </div>
     </div>

@@ -12,21 +12,35 @@
 		<title>Character</title>
 	</head>
 	<body>
-    <nav>
-      <a href="/characters/new">Add a New Character</a>
-    </nav>
-		<h2>Character Vault</h2>
-    <div class="index-container">
-    <ul>
+		<h2 class='page-title'>Character Vault</h2>
+    <div class="container index-container">
       <% characters.forEach(character => { %>
-      <li#otis> <a href="/characters/<%=character._id; %>"> <img class="index-image" src="<%=character.image; %>""> </a>
-      <form action="/characters/<%= character.id %>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE" />
-      </form>
-      <a href="/characters/<%=character._id %>/edit">Edit</a>
-      </li>
+      <div class='row character-row'>
+        <div class="col-md-4 character-portrait">
+          <a class='character-portrait-link' href="/characters/<%=character._id; %>">
+            <img class="index-image" src="<%=character.image; %>"">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <h3 class='col-md-12 character-name'><%=character.name; %></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <form action="/characters/<%= character.id %>?_method=DELETE" method="POST">
+                <button class='btn btn-danger btn-custom-dlt' type="submit">Delete</button>
+              </form>
+            </div>
+              <div class="col-md-2">
+                <a class='btn btn-secondary btn-custom-edit' href="/characters/<%=character._id %>/edit">Edit</a>
+              </div>
+          </div>
+        </div>
+      </div>
       <%  }) %>
-    </div>
-    </ul>
+      <div class="row">
+        <a class='col-md-3 btn btn-secondary btn-custom-add' href="/characters/new">+ Add a New Character</a>
+      </div>
+
 	</body>
 </html>
