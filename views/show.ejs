@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/normalize.css">
-  <title>Document</title>
-</head>
-<body>
-  <nav>
-    <a href="/characters">Back to Character Log</a>
-  </nav>
-  <div class="container">
-  <div class="primary-column">
-  <div class="main-text">
-  <h1><%=character.name %></h1>
-  <img class="char-image" src=<%= character.image %>> <br>
-  <span id="circle-box" >Gender: </span> <%= character.gender %> <br>
-  Race: <%= character.race %> <br>
-  Age: <%= character.age %> <br>
-  Birthday: <%= character.birthday %> <br>
-  Height: <%= character.height %> <br>
-  Nationality: <%= character.nationality %> <br>
-</div>
-  </div>
-  <div class="secondary-column">
-  <span class="biography">Biography:</span> <br>
-  <br>
-  <p> <%= character.biography %> </p> 
-  </div> 
-</body>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/normalize.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/characters">Back to Character Log</a>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 primary-column">
+          <div class="main-text">
+            <h1><%=character.name %></h1>
+            <img class="char-image" src="<%= character.image%>" /> <br />
+            <span id="circle-box">Gender: </span> <%= character.gender %> <br />
+            Race: <%= character.race %> <br />
+            Age: <%= character.age %> <br />
+            Birthday: <%= character.birthday %> <br />
+            Height: <%= character.height %> <br />
+            Nationality: <%= character.nationality %> <br />
+          </div>
+        </div>
+        <div class="col-md-9 secondary-column">
+          <div>
+            <span class="biography">Biography</span> <br />
+            <br />
+            <p><%= character.biography %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
