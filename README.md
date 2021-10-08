@@ -25,10 +25,11 @@ Screenshots
 Getting Started
 ===============
 Here's the site
-[link]().
+[link](https://rbucheli2.herokuapp.com/).
 
 Future Enhancements
 ===============
 - Implement basic authorization
 - Include delete buttons
-- Help
+- Allow users to add their own information
+- Allow users to add more photos
