@@ -25,7 +25,7 @@ Screenshots
 Getting Started
 ===============
 Here's the site
-[link](https://awesome-heisenberg-f0e05c.netlify.app/).
+[link]().
 
 Future Enhancements
 ===============
